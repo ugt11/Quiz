@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fOC-fI-pX8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wgT-hM-cBL">
+            <objects>
+                <navigationController id="fOC-fI-pX8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lCD-jM-LhF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="I91-1E-91t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lg3-Ne-i5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975" y="4"/>
+        </scene>
         <!--最初の画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -40,6 +56,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwz-KT-p10"/>
+                                    <segue destination="NO1-Gq-e3l" kind="show" id="Bnn-Di-e4Z"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIy-fo-uPX">
@@ -48,7 +65,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BBU-3e-I7Z"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -66,8 +83,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZmZ-1P-IRv" secondAttribute="trailing" constant="32" id="sJQ-Vh-uF4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="COI-Dw-ciD"/>
                     <connections>
                         <outlet property="label" destination="vnL-Sj-lUp" id="cfO-kk-NfP"/>
+                        <outlet property="nameTextField" destination="dIy-fo-uPX" id="NLj-Mv-kOE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,7 +96,7 @@
         <!--クイズ画面-->
         <scene sceneID="Mbh-bA-MfY">
             <objects>
-                <viewController title="クイズ画面" id="NO1-Gq-e3l" sceneMemberID="viewController">
+                <viewController title="クイズ画面" id="NO1-Gq-e3l" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CDh-1L-QvF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +158,10 @@
                             <constraint firstItem="yqX-8b-Eq0" firstAttribute="trailing" secondItem="KGJ-aY-pCt" secondAttribute="trailing" constant="16" id="y5Q-0O-EtB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tqM-WX-GYl"/>
+                    <connections>
+                        <outlet property="label" destination="KGJ-aY-pCt" id="O5A-ih-bqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6g-wN-U2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
