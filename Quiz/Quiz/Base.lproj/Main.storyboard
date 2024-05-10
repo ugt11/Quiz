@@ -45,14 +45,14 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-1P-IRv">
                                 <rect key="frame" x="281" y="449" width="80" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="right background"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gk3-01-lb8"/>
                                     <constraint firstAttribute="width" constant="80" id="ODi-w3-hn4"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
-                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwz-KT-p10"/>
@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="label" destination="KGJ-aY-pCt" id="O5A-ih-bqv"/>
                         <outlet property="quizCard" destination="qey-42-zyE" id="M0E-kz-Nmz"/>
+                        <segue destination="4Xc-a1-D7p" kind="show" identifier="goToResult" id="qEN-Zs-iad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6g-wN-U2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -176,18 +177,18 @@
         <!--結果画面-->
         <scene sceneID="jap-qk-xWN">
             <objects>
-                <viewController title="結果画面" id="4Xc-a1-D7p" sceneMemberID="viewController">
+                <viewController title="結果画面" id="4Xc-a1-D7p" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWF-73-7q2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1M0-tG-tnk">
                                 <rect key="frame" x="16" y="346" width="361" height="160"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="UbG-eb-HDf"/>
                                 </constraints>
-                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -210,6 +211,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pushResultButton:" destination="4Xc-a1-D7p" eventType="touchUpInside" id="1AE-Sj-hZb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fzJ-Ul-Kh8"/>
@@ -227,6 +231,11 @@
                             <constraint firstItem="faw-DO-A5H" firstAttribute="top" secondItem="1M0-tG-tnk" secondAttribute="bottom" constant="24" id="jiu-dH-ldp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yG4-qa-S6S"/>
+                    <connections>
+                        <outlet property="label" destination="NWV-SB-OHk" id="1qE-im-rfh"/>
+                        <outlet property="textView" destination="1M0-tG-tnk" id="J2N-UR-z0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FJ-De-5Ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,8 +257,8 @@
         <namedColor name="right background">
             <color red="0.0" green="0.53333333333333333" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
