@@ -10,23 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
-    
     @IBOutlet weak var nameTextField: UITextField!
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+   
     }
-    
     
     @IBAction func pressButton(_ sender: Any) {
         
-        
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let quizViewController =

@@ -9,7 +9,6 @@ import UIKit
 
 class QuizCard: UIView {
     
-
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var quizImageView: UIImageView!
     @IBOutlet weak var quizLabel: UILabel!

@@ -31,10 +31,7 @@ class QuizManager {
         currentIndex = 0
         score = 0
         status = .inAnswer
-        
-        
-        
-        
+
     }
     
     var currentQuiz: Quiz {
@@ -55,9 +52,6 @@ class QuizManager {
         } else {
             status = .done
         }
-        
     }
-    
-    
 }
 

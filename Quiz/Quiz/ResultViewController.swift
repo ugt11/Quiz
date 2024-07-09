@@ -8,15 +8,14 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textView: UITextView!
     
     var nameText: String = ""
     var score: Int = 0
     
-    
     let quizManager = QuizManager()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

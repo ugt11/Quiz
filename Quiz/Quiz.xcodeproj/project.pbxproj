@@ -66,8 +66,6 @@
 		93F68D132BDA2F66005E0458 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				93F68D142BDA2F66005E0458 /* AppDelegate.swift */,
-				93F68D162BDA2F66005E0458 /* SceneDelegate.swift */,
 				93F68D182BDA2F66005E0458 /* ViewController.swift */,
 				93A198092BE9F55E001C14EE /* QuizViewController.swift */,
 				932BAA582BEC6DFE00312B3A /* QuizCard.swift */,
@@ -77,6 +75,8 @@
 				93F68D1A2BDA2F66005E0458 /* Main.storyboard */,
 				93F68D1F2BDA2F68005E0458 /* LaunchScreen.storyboard */,
 				93F68D1D2BDA2F68005E0458 /* Assets.xcassets */,
+				93F68D142BDA2F66005E0458 /* AppDelegate.swift */,
+				93F68D162BDA2F66005E0458 /* SceneDelegate.swift */,
 				93F68D222BDA2F68005E0458 /* Info.plist */,
 			);
 			path = Quiz;
