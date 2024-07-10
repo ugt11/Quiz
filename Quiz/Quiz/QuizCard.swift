@@ -38,9 +38,6 @@ class QuizCard: UIView {
             self.backgroundColor = UIColor(named: "wrong background")
             self.iconImageView.isHidden = false
             self.iconImageView.image = UIImage(named: "wrong icon")
-            
         }
     }
-    
-
 }
