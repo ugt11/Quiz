@@ -20,12 +20,16 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let count = quizManager.quizzes.count
-        
-        // Do any additional setup after loading the view.
-        
+        configureLabel()
+        configureTextView()
+    }
+    
+    private func configureLabel() {
         self.label.text = "\(self.nameText)さん　あなたのスコアは\(self.score)です。"
-        
+    }
+    
+    private func configureTextView() {
+        let count = quizManager.quizzes.count
         var text = ""
         switch self.score {
         case 0...2:
@@ -38,11 +42,9 @@ class ResultViewController: UIViewController {
             break
         }
         self.textView.text = text
-        
     }
 
     @IBAction func pushResultButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
 }

@@ -18,9 +18,6 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-       
-        
         self.quizCard.style = .initial
         self.loadQuiz()
         let panGestureRecognizer =
@@ -95,7 +92,6 @@ class QuizViewController: UIViewController {
         } else {
             self.quizCard.style = .wrong
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -103,11 +99,6 @@ class QuizViewController: UIViewController {
         if let resultViewController:ResultViewController = segue.destination as? ResultViewController {
             resultViewController.nameText = self.nameText
             resultViewController.score = self.manager.score
-            
         }
-        
-    
     }
-    
-
 }
